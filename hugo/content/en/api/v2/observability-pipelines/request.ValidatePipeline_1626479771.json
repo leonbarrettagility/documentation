@@ -1,0 +1,50 @@
+{
+  "data": {
+    "attributes": {
+      "config": {
+        "pipeline_type": "metrics",
+        "destinations": [
+          {
+            "id": "datadog-metrics-destination",
+            "inputs": [
+              "aggregate-group"
+            ],
+            "type": "datadog_metrics"
+          }
+        ],
+        "processor_groups": [
+          {
+            "enabled": true,
+            "id": "aggregate-group",
+            "include": "*",
+            "inputs": [
+              "datadog-agent-source"
+            ],
+            "processors": [
+              {
+                "enabled": true,
+                "id": "aggregate-processor",
+                "include": "*",
+                "type": "aggregate",
+                "interval_secs": 10,
+                "mode": "sum",
+                "aggregation_timing": {
+                  "type": "event_time",
+                  "allowed_lateness_secs": 15
+                }
+              }
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "id": "datadog-agent-source",
+            "type": "datadog_agent"
+          }
+        ]
+      },
+      "name": "Metrics Pipeline with Event-Time Aggregation"
+    },
+    "type": "pipelines"
+  }
+}
