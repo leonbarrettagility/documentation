@@ -75,11 +75,11 @@ Each audited RUM view carries the `@synthetics.lighthouse_audited:true` attribut
 
 The category scores are available as metrics, so you can graph them on dashboards and alert on regressions with monitors:
 
-- `rum.synthetics.lighthouse.performance`
-- `rum.synthetics.lighthouse.accessibility`
-- `rum.synthetics.lighthouse.best_practices`
-- `rum.synthetics.lighthouse.seo`
-- `rum.synthetics.lighthouse.agentic`
+- `rum.measure.lighthouse.performance`
+- `rum.measure.lighthouse.accessibility`
+- `rum.measure.lighthouse.best_practices`
+- `rum.measure.lighthouse.seo`
+- `rum.measure.lighthouse.agentic`
 
 These metrics are tagged with `application.id` and `view.name`.
 
