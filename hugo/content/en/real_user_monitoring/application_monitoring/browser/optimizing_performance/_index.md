@@ -103,6 +103,10 @@ You can select another sample event using the dropdown in the top left, and expa
 For deeper root cause analysis, use browser profiling alongside RUM to identify what JavaScript or rendering activity is causing slow or unresponsive experiences. Profiling reveals performance issues that aren't always visible through Core Web Vitals alone. To get started, [ensure that browser profiling is enabled in your RUM SDK configuration][12].
 {{< img src="real_user_monitoring/browser/optimizing_performance/browser_profiler.png" alt="Browser profiling example when analyzing an event sample." style="width:100%;" >}}
 
+## Lighthouse audits
+
+Alongside field data from real users, you can run Google Lighthouse audits from browser Synthetic tests and track lab scores (Performance, Accessibility, Best Practices, SEO, and Agentic) for the matching RUM view. The latest scores appear in the **Lighthouse** panel on this page. For setup and details, see [Lighthouse audits][15].
+
 ## Further Reading
 
 {{< partial name="whats-next/whats-next.html" >}}
@@ -120,3 +124,4 @@ For deeper root cause analysis, use browser profiling alongside RUM to identify 
 [12]: /real_user_monitoring/correlate_with_other_telemetry/profiling
 [13]: /real_user_monitoring/guide/browser-sdk-upgrade/#collect-long-animation-frames-as-long-tasks
 [14]: /real_user_monitoring/application_monitoring/browser/monitoring_page_performance/#diagnose-core-web-vitals-with-subparts
+[15]: /real_user_monitoring/application_monitoring/browser/optimizing_performance/lighthouse_audits/

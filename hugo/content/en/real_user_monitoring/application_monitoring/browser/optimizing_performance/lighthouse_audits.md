@@ -13,8 +13,6 @@ further_reading:
     text: "Monitor Core Web Vitals with Datadog RUM and Synthetic Monitoring"
 ---
 
-<div class="alert alert-info">Lighthouse audits in RUM are in Preview.</div>
-
 ## Overview
 
 A [browser Synthetic test][1] can run a [Google Lighthouse][2] audit against the page it tests and attach the results to the matching RUM view. While Core Web Vitals and other RUM data reflect what real users experience in the field, Lighthouse scores give you a consistent lab measurement from a controlled Datadog location, so you can track frontend quality on a schedule and catch regressions before they reach users.
