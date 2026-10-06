@@ -31422,7 +31422,12 @@ components:
           nullable: true
           type: string
         dashboard_quality_score:
-          description: The dashboard quality score, or `null` when no score is available.
+          description: |-
+            The dashboard quality score ranges from 0 to 1, with higher scores indicating stronger signals of quality and usefulness. Returns `null` when no score is available.
+
+            The score considers dashboard and widget naming, including whether dashboards use default or templated names; the number of data widgets (excluding container and text widgets); confirmed broken queries; and recent activity. Activity is based on the last view date, falling back to the last edit or creation date when no view date is available.
+
+            Dashboards linked from monitors do not receive lower scores because of their naming or lack of recent activity. An age-based adjustment helps prevent newly created dashboards from receiving disproportionately low scores. Queries only lower the score when confidently identified as broken.
           example: 0.85
           format: double
           nullable: true
