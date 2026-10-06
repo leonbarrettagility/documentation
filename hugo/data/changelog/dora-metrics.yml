@@ -1,0 +1,7 @@
+entries:
+  - change_type: modified
+    date: '2026-10-02'
+    link: https://github.com/DataDog/documentation/pull/40375
+    operations:
+      - PatchDORADeployment
+    title: Rename Patch a deployment event to Mark a deployment as failed by ID
